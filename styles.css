@@ -1,0 +1,732 @@
+/*
+==========================================================
+Beyond Denominations
+Returning to the Apostles' Doctrine
+
+Site-wide Stylesheet
+Designed for Bradley Hobbs
+
+Theme:
+Jerusalem Stone • Parchment • Sunrise Gold • Deep Navy
+==========================================================
+*/
+
+/* ==========================================================
+ROOT COLORS
+========================================================== */
+
+:root {
+
+    --primary: #1F3553;
+    --primary-light: #314A67;
+
+    --gold: #C79A43;
+    --gold-light: #D9B56B;
+
+    --stone: #A98B6C;
+    --sand: #CDB89A;
+
+    --parchment: #F5EEDC;
+    --background: #FBF8F1;
+
+    --bronze: #8A6338;
+    --olive: #6D705A;
+
+    --wood: #5A4330;
+    --shadow: #35291F;
+
+    --text: #222222;
+    --text-light: #666666;
+
+    --border: #E2D5C3;
+
+    --max-width: 1100px;
+
+    --radius: 8px;
+
+    --transition: .3s ease;
+
+}
+
+/* ==========================================================
+RESET
+========================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+    font-size: 100%;
+
+    -webkit-text-size-adjust: 100%;
+
+}
+
+
+body {
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: "Libre Baskerville", Georgia, serif;
+
+    font-size: 18px;
+
+    line-height: 1.85;
+
+    letter-spacing: .02em;
+
+    overflow-x: hidden;
+
+    min-height: 100vh;
+
+    text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+/* ==========================================================
+MEDIA DEFAULTS
+========================================================== */
+
+picture,
+svg,
+video,
+canvas {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+/* ==========================================================
+CONTAINER
+========================================================== */
+
+.container {
+
+    width: min(92%, var(--max-width));
+
+    margin: auto;
+
+}
+
+/* ==========================================================
+TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 1rem;
+
+}
+
+h1 {
+
+    font-size: clamp(3rem, 6vw, 5rem);
+
+}
+
+h2 {
+
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+
+}
+
+h3 {
+
+    font-size: 2rem;
+
+}
+
+p {
+
+    margin-bottom: 1.6rem;
+
+}
+
+strong {
+
+    color: var(--primary);
+
+}
+
+em {
+
+    color: var(--bronze);
+
+}
+
+/* ==========================================================
+LINKS
+========================================================== */
+
+a {
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+a:hover {
+
+    color: var(--gold);
+
+}
+
+/* ==========================================================
+HEADER
+========================================================== */
+
+header {
+
+    background: rgba(251,248,241,.95);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 0;
+
+}
+
+/* ==========================================================
+HERO
+========================================================== */
+
+.hero {
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        #FBF8F1,
+
+        #F5EEDC,
+
+        #FBF8F1
+
+    );
+
+    padding: 120px 0;
+
+    text-align: center;
+
+}
+
+.hero h1 {
+
+    color: var(--primary);
+
+}
+
+.hero p {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    color: var(--text-light);
+
+    font-size: 1.15rem;
+
+}
+
+/* ==========================================================
+SECTIONS
+========================================================== */
+
+section {
+
+    padding: 80px 0;
+
+}
+
+.section-light {
+
+    background: var(--background);
+
+}
+
+.section-parchment {
+
+    background: var(--parchment);
+
+}
+
+/* ==========================================================
+CARDS
+========================================================== */
+
+.card {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 10px;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+
+        0 8px 24px rgba(0,0,0,.08);
+
+    transition: var(--transition);
+
+}
+
+.card:hover {
+
+    transform: translateY(-4px);
+
+}
+
+/* ==========================================================
+BUTTONS
+========================================================== */
+
+.button {
+
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    background: var(--primary);
+
+    color: white;
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+
+}
+
+.button:hover {
+
+    background: var(--primary-light);
+
+    color: white;
+
+}
+
+.button-outline {
+
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    border: 2px solid var(--gold);
+
+    color: var(--primary);
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+
+}
+
+.button-outline:hover {
+
+    background: var(--gold);
+
+    color: white;
+
+}
+
+/* ==========================================================
+IMAGES
+========================================================== */
+
+img {
+
+    max-width: 100%;
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: var(--radius);
+
+}
+
+.feature-image {
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================================
+BOOK CONTENT
+========================================================== */
+
+.book-content {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+.book-content h2 {
+
+    margin-top: 60px;
+
+}
+
+.book-content p {
+
+    text-align: justify;
+
+}
+
+/* ==========================================================
+BLOCKQUOTE
+========================================================== */
+
+blockquote {
+
+    margin: 40px 0;
+
+    padding: 30px;
+
+    border-left: 4px solid var(--gold);
+
+    background: rgba(199,154,67,.08);
+
+    color: var(--wood);
+
+    font-style: italic;
+
+}
+
+/* ==========================================================
+TABLES
+========================================================== */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+th {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+th,
+td {
+
+    padding: 16px;
+
+    border: 1px solid var(--border);
+
+}
+
+/* ==========================================================
+DIVIDER
+========================================================== */
+
+.divider {
+
+    width: 120px;
+
+    height: 2px;
+
+    background: var(--gold);
+
+    margin: 60px auto;
+
+    position: relative;
+
+}
+
+.divider::before {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: -13px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: var(--background);
+
+    color: var(--gold);
+
+    padding: 0 12px;
+
+}
+
+/* ==========================================================
+FOOTER
+========================================================== */
+
+footer {
+
+    background: var(--primary);
+
+    color: var(--parchment);
+
+    padding: 70px 0;
+
+}
+
+footer h3 {
+
+    color: white;
+
+}
+
+footer a {
+
+    color: var(--gold-light);
+
+}
+
+footer a:hover {
+
+    color: white;
+
+}
+
+/* ==========================================================
+TEXT SELECTION
+========================================================== */
+
+*::selection {
+
+    background: var(--gold);
+
+    color: white;
+
+}
+
+*::-moz-selection {
+
+    background: var(--gold);
+
+    color: white;
+
+}
+
+
+
+/* ==========================================================
+UTILITY
+========================================================== */
+
+.text-center {
+
+    text-align: center;
+
+}
+
+.mt-1 {
+
+    margin-top: 1rem;
+
+}
+
+.mt-2 {
+
+    margin-top: 2rem;
+
+}
+
+.mt-3 {
+
+    margin-top: 3rem;
+
+}
+
+.mb-1 {
+
+    margin-bottom: 1rem;
+
+}
+
+.mb-2 {
+
+    margin-bottom: 2rem;
+
+}
+
+.mb-3 {
+
+    margin-bottom: 3rem;
+
+}
+
+/* ==========================================================
+RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+
+    body {
+
+        font-size: 17px;
+
+    }
+
+    .hero {
+
+        padding: 80px 0;
+
+    }
+
+    h1 {
+
+        font-size: 3rem;
+
+    }
+
+    h2 {
+
+        font-size: 2.3rem;
+
+    }
+
+    section {
+
+        padding: 60px 0;
+
+    }
+
+    .card {
+
+        padding: 30px;
+
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    body {
+
+        font-size: 16px;
+
+        line-height: 1.75;
+
+    }
+
+    nav {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+    .hero {
+
+        padding: 60px 0;
+
+    }
+
+    .button,
+    .button-outline {
+
+        display: block;
+
+        text-align: center;
+
+        width: 100%;
+
+    }
+
+}
+
+/*
+==========================================================
+
+Theme Summary
+
+Background:
+#FBF8F1
+
+Parchment:
+#F5EEDC
+
+Primary Navy:
+#1F3553
+
+Accent Gold:
+#C79A43
+
+Text:
+#222222
+
+Overall Design:
+Timeless
+Literary
+Warm
+Elegant
+Jerusalem at Sunrise
+
+==========================================================
+*/
