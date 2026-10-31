@@ -1255,3 +1255,199 @@ img {
         padding-right: 3px;
     }
 }
+
+
+/* ==========================================================
+   CONTENTS PAGE: EDITORIAL CHAPTER DIRECTORY
+   ========================================================== */
+.contents-hero {
+    padding: 76px 0 48px;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(199,154,67,.13), transparent 58%),
+        linear-gradient(180deg, #F5EEDC 0%, #FBF8F1 100%);
+}
+.contents-hero .book-content {
+    max-width: 760px;
+}
+.contents-eyebrow {
+    margin: 0 0 14px;
+    color: var(--bronze);
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+}
+.contents-hero h1 {
+    margin: 0 0 18px;
+    font-size: clamp(3rem, 6vw, 4.7rem);
+}
+.contents-intro {
+    max-width: 680px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.9;
+    text-align: center !important;
+}
+.contents-rule {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 110px;
+    margin: 30px auto 18px;
+    color: var(--gold);
+}
+.contents-rule::before,
+.contents-rule::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--gold);
+}
+.contents-rule span {
+    font-size: .85rem;
+}
+.contents-count {
+    margin: 0;
+    color: var(--stone);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .17em;
+    text-align: center !important;
+}
+.contents-count span {
+    padding: 0 8px;
+    color: var(--gold);
+}
+.contents-section {
+    padding: 42px 0 76px;
+    background: var(--background);
+}
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+.chapter-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 190px;
+    padding: 25px 27px 22px;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--gold);
+    border-radius: 7px;
+    background: rgba(255,255,255,.78);
+    box-shadow: 0 5px 18px rgba(53,41,31,.045);
+    text-decoration: none;
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.chapter-card:hover,
+.chapter-card:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--gold-light);
+    box-shadow: 0 12px 26px rgba(53,41,31,.10);
+    color: var(--primary);
+}
+.chapter-index {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--bronze);
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-size: .67rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+.chapter-card h2 {
+    margin: 0 0 20px;
+    color: var(--primary);
+    font-size: clamp(1.65rem, 2.6vw, 2.05rem);
+    line-height: 1.12;
+}
+.chapter-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(226,213,195,.8);
+    color: var(--bronze);
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .045em;
+}
+.chapter-action span {
+    color: var(--gold);
+    font-size: 1.15rem;
+    transition: transform .2s ease;
+}
+.chapter-card:hover .chapter-action span {
+    transform: translateX(4px);
+}
+.chapter-card-featured {
+    background: linear-gradient(135deg, #F5EEDC, #FFFDF8);
+    border-top-color: var(--primary);
+}
+.contents-scripture {
+    padding: 0 0 56px;
+    background: var(--background);
+}
+.contents-scripture .container {
+    max-width: 1000px;
+}
+.contents-scripture img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 30px rgba(53,41,31,.08);
+}
+@media (max-width: 700px) {
+    .contents-hero {
+        padding: 42px 0 30px;
+    }
+    .contents-hero h1 {
+        font-size: clamp(2.45rem, 10vw, 3.3rem);
+    }
+    .contents-intro {
+        font-size: .91rem;
+        line-height: 1.8;
+    }
+    .contents-section {
+        padding: 24px 0 42px;
+    }
+    .chapter-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .chapter-card {
+        min-height: 0;
+        padding: 19px 19px 16px;
+    }
+    .chapter-index {
+        margin-bottom: 8px;
+        font-size: .62rem;
+    }
+    .chapter-card h2 {
+        margin-bottom: 14px;
+        font-size: 1.65rem;
+    }
+    .chapter-action {
+        padding-top: 9px;
+        font-size: .72rem;
+    }
+    .contents-scripture {
+        padding-bottom: 34px;
+    }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+    .chapter-grid {
+        gap: 14px;
+    }
+    .chapter-card {
+        padding: 22px;
+    }
+}
