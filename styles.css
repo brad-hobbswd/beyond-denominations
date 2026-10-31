@@ -1506,57 +1506,80 @@ img {
 
 
 /* ==========================================================
-   CHAPTER READING WIDTH AND PAGE MARGINS
-   Applies to the actual chapter manuscript, not directory cards.
+   SITE-WIDE READING WIDTH AND PAGE MARGINS
+   Consistent comfortable reading space across every page.
    ========================================================== */
-.section-light > .book-content {
+
+/* Shared manuscript and reading areas on Home, About, Author,
+   Contents, and every chapter page. */
+.book-content {
     max-width: 760px;
     padding-left: 12px;
     padding-right: 12px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.section-light > .book-content > p {
+.book-content > p {
     padding-left: 4px;
     padding-right: 4px;
+    line-height: 1.85;
+}
+
+/* Keep section content aligned consistently, including sections
+   that contain images or other non-manuscript elements. */
+main > section > .container {
+    box-sizing: border-box;
 }
 
 @media (max-width: 900px) {
-    .section-light > .book-content {
+    .book-content {
         max-width: 740px;
         padding-left: 10px;
         padding-right: 10px;
     }
+
+    .book-content > p {
+        line-height: 1.85;
+    }
 }
 
 @media (max-width: 600px) {
-    .section-light > .book-content {
-        width: calc(100% - 56px);
+    .book-content {
+        width: 100%;
         max-width: 500px;
         padding-left: 5px;
         padding-right: 5px;
     }
 
-    .section-light > .book-content > p {
+    .book-content > p {
         padding-left: 3px;
         padding-right: 3px;
         line-height: 1.9;
         margin-bottom: 1.35rem;
+        text-align: left;
+        hyphens: auto;
+        overflow-wrap: break-word;
     }
 
-    .section-light > .book-content > blockquote {
+    .book-content > blockquote {
         margin-left: 3px;
         margin-right: 3px;
         padding: 20px 18px;
     }
 
-    .section-light > .book-content > h1 {
+    .book-content > h1,
+    .book-content > h2,
+    .book-content > h3 {
         padding-left: 3px;
         padding-right: 3px;
+        overflow-wrap: break-word;
     }
 }
 
 @media (max-width: 380px) {
-    .section-light > .book-content {
-        width: calc(100% - 48px);
+    .book-content {
+        padding-left: 3px;
+        padding-right: 3px;
     }
 }
