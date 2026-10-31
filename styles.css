@@ -1196,3 +1196,62 @@ img {
         margin: 1.2rem auto;
     }
 }
+
+/* ==========================================================
+   MOBILE READING GUTTERS
+   Keep prose comfortably inset from the device edges.
+   ========================================================== */
+
+@media (max-width: 600px) {
+    .container {
+        width: calc(100% - 44px);
+        max-width: 500px;
+    }
+
+    .book-content {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .book-content > p,
+    .book-content > h1,
+    .book-content > h2,
+    .book-content > h3,
+    .book-content > blockquote,
+    .book-content > .chapter-number {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .book-content > p {
+        padding-left: 2px;
+        padding-right: 2px;
+        line-height: 1.85;
+    }
+
+    .book-content > blockquote {
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    .book-content > h1,
+    .book-content > h2,
+    .book-content > h3 {
+        overflow-wrap: break-word;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        width: calc(100% - 40px);
+    }
+
+    .book-content {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}
