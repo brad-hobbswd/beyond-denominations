@@ -1451,3 +1451,55 @@ img {
         padding: 22px;
     }
 }
+
+
+/* ==========================================================
+   CONTENTS PAGE: EXTRA PHONE-SIZE OUTER BREATHING ROOM
+   ========================================================== */
+@media (max-width: 700px) {
+    .contents-hero > .container,
+    .contents-section > .container {
+        width: calc(100% - 56px);
+        max-width: 500px;
+    }
+
+    .contents-hero .book-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .chapter-grid {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .chapter-card {
+        padding: 23px 21px 19px;
+        border-radius: 9px;
+    }
+
+    .chapter-card h2 {
+        line-height: 1.2;
+    }
+
+    .contents-intro {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .contents-scripture .container {
+        width: calc(100% - 56px);
+    }
+}
+
+@media (max-width: 380px) {
+    .contents-hero > .container,
+    .contents-section > .container,
+    .contents-scripture .container {
+        width: calc(100% - 48px);
+    }
+
+    .chapter-card {
+        padding: 20px 18px 17px;
+    }
+}
