@@ -301,3 +301,12 @@ footer .footer-copyright{margin-top:1.3rem;font-size:.8rem}
     padding-top: 34px;
   }
 }
+
+
+/* Keep the decorative divider star aligned with the background of its section */
+.section-light .divider::before {
+  background: var(--background);
+}
+.section-parchment .divider::before {
+  background: var(--parchment);
+}
