@@ -176,28 +176,28 @@ footer .footer-copyright{margin-top:1.3rem;font-size:.8rem}
 @media(max-width:600px){footer .footer-links,footer .footer-legal-links{gap:9px 15px}footer .footer-links a,footer .footer-legal-links a{font-size:.74rem}.legal-content h2{margin-top:1.35rem;font-size:1.55rem}}
 
 
-/* Homepage masthead artwork: intentionally restrained on desktop */
-body > main > section.hero > .container > img.feature-image {
-  display: block !important;
-  width: min(100%, 700px) !important;
-  max-width: 700px !important;
-  max-height: 390px !important;
-  height: auto !important;
+
+
+/* The large ancient scroll photograph in the parchment section */
+.section-parchment .feature-image {
+  display: block;
+  width: min(100%, 760px);
+  max-width: 760px;
+  max-height: 430px;
+  height: auto;
   object-fit: contain;
   margin: 0 auto;
 }
-@media (min-width: 769px) {
-  body > main > section.hero {
-    padding: 20px 0 28px;
-  }
-  body > main > section.hero > .container {
-    max-width: 760px;
-  }
+.section-parchment {
+  padding-block: clamp(22px, 3vw, 36px);
 }
 @media (max-width: 768px) {
-  body > main > section.hero > .container > img.feature-image {
-    width: min(100%, 560px) !important;
-    max-width: 560px !important;
-    max-height: 300px !important;
+  .section-parchment .feature-image {
+    width: 100%;
+    max-width: 100%;
+    max-height: 300px;
+  }
+  .section-parchment {
+    padding-block: 20px;
   }
 }
