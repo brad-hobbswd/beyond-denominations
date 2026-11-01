@@ -327,3 +327,22 @@ main > section.section-parchment:has(a.button[href="contents.html"]) {
 footer .book-content > p {
   text-align: center !important;
 }
+
+
+/* Author page: match the homepage reading rhythm and full-width scripture artwork */
+body:has(main > section.section-light .book-content > h1) main > section.section-light {
+  padding-block: clamp(32px, 4vw, 52px);
+}
+main > section:has(> img[alt="Acts 2:42"]) {
+  padding: 0 !important;
+}
+main > section:has(> img[alt="Acts 2:42"]) > img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
