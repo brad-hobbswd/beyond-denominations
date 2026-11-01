@@ -201,3 +201,31 @@ footer .footer-copyright{margin-top:1.3rem;font-size:.8rem}
     padding-block: 20px;
   }
 }
+
+
+/* Scroll artwork is standalone artwork, not a framed card */
+#scroll-artwork {
+  display: block !important;
+  width: min(100%, 760px) !important;
+  max-width: 760px !important;
+  max-height: 430px !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  object-fit: contain;
+}
+.section-parchment {
+  padding-block: 0 !important;
+}
+@media (max-width: 768px) {
+  #scroll-artwork {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 300px !important;
+  }
+}
