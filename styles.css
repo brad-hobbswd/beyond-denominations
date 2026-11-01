@@ -310,3 +310,14 @@ footer .footer-copyright{margin-top:1.3rem;font-size:.8rem}
 .section-parchment .divider::before {
   background: var(--parchment);
 }
+
+
+/* Give the final call-to-action room before the full-width Acts artwork */
+main > section.section-parchment:has(a.button[href="contents.html"]) {
+  padding-bottom: clamp(48px, 5vw, 68px) !important;
+}
+@media (max-width: 600px) {
+  main > section.section-parchment:has(a.button[href="contents.html"]) {
+    padding-bottom: 42px !important;
+  }
+}
