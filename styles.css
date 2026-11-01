@@ -174,3 +174,30 @@ footer .footer-copyright{margin-top:1.3rem;font-size:.8rem}
 .legal-content p{line-height:1.8}
 .legal-content .legal-updated{margin-top:2.5rem;color:var(--text-light);font-size:.85rem}
 @media(max-width:600px){footer .footer-links,footer .footer-legal-links{gap:9px 15px}footer .footer-links a,footer .footer-legal-links a{font-size:.74rem}.legal-content h2{margin-top:1.35rem;font-size:1.55rem}}
+
+
+/* Homepage masthead artwork: intentionally restrained on desktop */
+body > main > section.hero > .container > img.feature-image {
+  display: block !important;
+  width: min(100%, 700px) !important;
+  max-width: 700px !important;
+  max-height: 390px !important;
+  height: auto !important;
+  object-fit: contain;
+  margin: 0 auto;
+}
+@media (min-width: 769px) {
+  body > main > section.hero {
+    padding: 20px 0 28px;
+  }
+  body > main > section.hero > .container {
+    max-width: 760px;
+  }
+}
+@media (max-width: 768px) {
+  body > main > section.hero > .container > img.feature-image {
+    width: min(100%, 560px) !important;
+    max-width: 560px !important;
+    max-height: 300px !important;
+  }
+}
