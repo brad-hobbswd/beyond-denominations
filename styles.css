@@ -265,3 +265,39 @@ footer .footer-copyright{margin-top:1.3rem;font-size:.8rem}
     border-radius: 9px !important;
   }
 }
+
+
+/* Correct the scroll banner proportions and section transition */
+.section-parchment:has(#scroll-artwork) {
+  padding-block: clamp(28px, 3.4vw, 44px) !important;
+}
+#scroll-artwork {
+  display: block !important;
+  width: min(100%, 820px) !important;
+  max-width: 820px !important;
+  height: clamp(280px, 45vw, 420px) !important;
+  max-height: 420px !important;
+  aspect-ratio: 1.95 / 1;
+  object-fit: cover !important;
+  object-position: center !important;
+  margin: 0 auto !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 28px rgba(53, 41, 31, .10) !important;
+}
+.section-parchment:has(#scroll-artwork) + .section-light {
+  padding-top: clamp(38px, 4.5vw, 58px);
+}
+@media (max-width: 600px) {
+  .section-parchment:has(#scroll-artwork) {
+    padding-block: 20px 26px !important;
+  }
+  #scroll-artwork {
+    width: 100% !important;
+    height: clamp(210px, 62vw, 300px) !important;
+    border-radius: 9px !important;
+  }
+  .section-parchment:has(#scroll-artwork) + .section-light {
+    padding-top: 34px;
+  }
+}
