@@ -321,3 +321,9 @@ main > section.section-parchment:has(a.button[href="contents.html"]) {
     padding-bottom: 42px !important;
   }
 }
+
+
+/* Footer text should remain centered despite the reading-column paragraph rules */
+footer .book-content > p {
+  text-align: center !important;
+}
