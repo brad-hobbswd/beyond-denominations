@@ -1583,3 +1583,376 @@ main > section > .container {
         padding-right: 3px;
     }
 }
+
+
+/* ==========================================================
+   SITE-WIDE SPACING AND ALIGNMENT NORMALIZATION
+   Shared page grid, consistent vertical rhythm, and safe
+   reading gutters across desktop, tablet, and mobile.
+   ========================================================== */
+
+:root {
+    --page-gutter: clamp(22px, 4vw, 48px);
+    --reading-width: 760px;
+    --layout-width: 1100px;
+    --section-space: clamp(44px, 5.5vw, 68px);
+}
+
+html,
+body {
+    width: 100%;
+    min-width: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.container {
+    width: min(calc(100% - (var(--page-gutter) * 2)), var(--layout-width));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header .container {
+    width: min(calc(100% - (var(--page-gutter) * 2)), var(--layout-width));
+}
+
+nav {
+    width: 100%;
+    min-height: 64px;
+    padding: 14px 0;
+    justify-content: center;
+}
+
+.nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(16px, 2.5vw, 32px);
+}
+
+main > section {
+    padding-block: var(--section-space);
+}
+
+main > section > .container {
+    width: min(calc(100% - (var(--page-gutter) * 2)), var(--layout-width));
+}
+
+.book-content,
+.container.book-content {
+    width: 100%;
+    max-width: var(--reading-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(8px, 1.2vw, 16px);
+    padding-right: clamp(8px, 1.2vw, 16px);
+}
+
+.book-content > h1,
+.book-content > h2,
+.book-content > h3,
+.book-content > h4 {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-wrap: balance;
+}
+
+.book-content > p {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 1.82;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.book-content > p:last-child {
+    margin-bottom: 0;
+}
+
+.book-content > blockquote {
+    margin: clamp(24px, 3vw, 38px) 0;
+    padding: clamp(20px, 2.5vw, 30px);
+}
+
+.book-content > .divider {
+    margin: clamp(30px, 4vw, 48px) auto;
+}
+
+.hero {
+    padding-block: clamp(64px, 8vw, 104px);
+}
+
+.hero .container {
+    max-width: 900px;
+}
+
+.hero p {
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+.card,
+.chapter-card {
+    min-width: 0;
+}
+
+img,
+video,
+iframe,
+table {
+    max-width: 100%;
+}
+
+footer {
+    margin-top: auto;
+    padding-block: clamp(38px, 5vw, 60px);
+}
+
+footer .container {
+    width: min(calc(100% - (var(--page-gutter) * 2)), var(--reading-width));
+}
+
+footer p {
+    line-height: 1.7;
+}
+
+.contents-hero,
+.contents-section,
+.contents-scripture {
+    scroll-margin-top: 5rem;
+}
+
+.contents-hero {
+    padding-block: clamp(44px, 6vw, 72px) clamp(30px, 4vw, 48px);
+}
+
+.contents-section {
+    padding-block: clamp(32px, 4vw, 52px);
+}
+
+.contents-scripture {
+    padding-block: 0 clamp(36px, 4vw, 52px);
+}
+
+.contents-scripture .container {
+    width: min(calc(100% - (var(--page-gutter) * 2)), 1000px);
+}
+
+.chapter-grid {
+    width: 100%;
+    align-items: stretch;
+}
+
+.chapter-card {
+    height: 100%;
+}
+
+@media (max-width: 900px) {
+    :root {
+        --page-gutter: 28px;
+        --section-space: 42px;
+    }
+
+    .container,
+    header .container,
+    main > section > .container {
+        width: calc(100% - (var(--page-gutter) * 2));
+    }
+
+    nav {
+        min-height: 58px;
+    }
+
+    .nav-links {
+        gap: 16px 22px;
+    }
+
+    .book-content,
+    .container.book-content {
+        max-width: 740px;
+    }
+
+    .hero {
+        padding-block: 56px;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --page-gutter: 22px;
+        --section-space: 32px;
+    }
+
+    body {
+        font-size: 15px;
+        line-height: 1.78;
+    }
+
+    .container,
+    header .container,
+    main > section > .container,
+    footer .container {
+        width: calc(100% - 44px);
+    }
+
+    nav {
+        min-height: 0;
+        padding: 12px 0;
+    }
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        width: 100%;
+        gap: 6px;
+        align-items: stretch;
+    }
+
+    .nav-links a {
+        min-width: 0;
+        min-height: 38px;
+        padding: 7px 4px;
+        font-size: .62rem;
+        line-height: 1.25;
+        letter-spacing: .015em;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    main > section {
+        padding-block: var(--section-space);
+    }
+
+    .book-content,
+    .container.book-content {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .book-content > h1,
+    .book-content > h2,
+    .book-content > h3,
+    .book-content > h4 {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: .8rem;
+        overflow-wrap: break-word;
+    }
+
+    .book-content > p {
+        padding: 0;
+        margin-bottom: 1.15rem;
+        line-height: 1.82;
+        text-align: left;
+        hyphens: auto;
+    }
+
+    .book-content > blockquote {
+        margin: 1.4rem 0;
+        padding: 17px 18px;
+        line-height: 1.68;
+    }
+
+    .book-content > .divider {
+        margin: 1.8rem auto;
+    }
+
+    .hero {
+        padding-block: 36px 40px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.15rem, 9vw, 2.8rem);
+    }
+
+    .hero p {
+        font-size: .98rem;
+        line-height: 1.75;
+    }
+
+    .card {
+        padding: 20px 18px;
+    }
+
+    .chapter-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .chapter-card {
+        min-height: 0;
+        padding: 20px 19px 17px;
+    }
+
+    .contents-hero {
+        padding-block: 34px 26px;
+    }
+
+    .contents-section {
+        padding-block: 24px 34px;
+    }
+
+    .contents-scripture {
+        padding-block: 0 28px;
+    }
+
+    footer {
+        padding-block: 30px 24px;
+    }
+
+    footer p {
+        margin-bottom: .85rem;
+        font-size: .88rem;
+    }
+
+    .button,
+    .button-outline {
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    :root {
+        --page-gutter: 18px;
+    }
+
+    .container,
+    header .container,
+    main > section > .container,
+    footer .container {
+        width: calc(100% - 36px);
+    }
+
+    .nav-links {
+        gap: 4px;
+    }
+
+    .nav-links a {
+        padding-inline: 2px;
+        font-size: .56rem;
+    }
+
+    .book-content > p {
+        font-size: .94rem;
+    }
+}
